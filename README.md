@@ -24,8 +24,8 @@ Binary version
 
 Download the latest release:
 
-* JAR file with dependencies: [secrete.zip](https://pkg.naes.co/secrete/secrete.zip)
-* GPG Signature: [secrete.zip.sig](https://pkg.naes.co/secrete/secrete.zip.sig)
+* JAR file with dependencies: [ecc.zip](https://pkg.naes.co/ecc/ecc.zip)
+* GPG Signature: [ecc.zip.sig](https://pkg.naes.co/ecc/ecc.zip.sig)
 
 Usage
 -----
@@ -36,7 +36,7 @@ Usage
 $ java -jar ecc.jar genKeys
 ```
 
-This will generate the two files `public.key` and `private.key` under the `.secrete` folder in the user's home.  
+This will generate the two files `public.key` and `private.key` under the `.ecc` folder in the user's home.  
 A password will be required to protect the private key.
 
 The private key is stored using PBKDF2 with SHA-512 and AES-256 CBC mode with PKCS7 Padding.

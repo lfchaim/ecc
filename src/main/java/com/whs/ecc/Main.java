@@ -139,7 +139,7 @@ public class Main {
 
 	public static String getProgramFolder() {
 
-		String sFolder = String.format("%s%c.secrete", System.getProperty("user.home"), File.separatorChar);
+		String sFolder = String.format("%s%c.ecc", System.getProperty("user.home"), File.separatorChar);
 
 		File folder = new File(sFolder);
 
