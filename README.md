@@ -33,7 +33,7 @@ Usage
 ### Generate the key pair:
 
 ```bash
-$ java -jar secrete.jar genKeys
+$ java -jar ecc.jar genKeys
 ```
 
 This will generate the two files `public.key` and `private.key` under the `.secrete` folder in the user's home.  
@@ -45,13 +45,13 @@ The private key is stored using PBKDF2 with SHA-512 and AES-256 CBC mode with PK
 ### Export the public key:
 
 ```bash
-$ java -jar secrete.jar -o <key_file> exportKey
+$ java -jar ecc.jar -o <key_file> exportKey
 ```
 
 ### Encrypt a text message:
 
 ```bash
-$ java -jar secrete.jar -k <recipient_key_file> encrypt
+$ java -jar ecc.jar -k <recipient_key_file> encrypt
 ```
 
 Insert the message ending with a "."; the encrypted message will be displayed encoded in Base64.
@@ -59,13 +59,13 @@ Insert the message ending with a "."; the encrypted message will be displayed en
 It is also possible to output the encrypted message to a binary file by specifying the "-o" option:
 
 ```bash
-$ java -jar secrete.jar -k <recipient_key_file> -o <encrypted_file> encrypt
+$ java -jar ecc.jar -k <recipient_key_file> -o <encrypted_file> encrypt
 ```
 
 ### Decrypt a text message:
 
 ```bash
-$ java -jar secrete.jar decrypt
+$ java -jar ecc.jar decrypt
 ```
 
 Insert the Base64 encrypted message and the password to unlock the private key.
@@ -73,19 +73,19 @@ Insert the Base64 encrypted message and the password to unlock the private key.
 It is also possible to load the encrypted message from the binary file by specifying the "-i" option:
 
 ```bash
-$ java -jar secrete.jar -i <encrypted_file> decrypt
+$ java -jar ecc.jar -i <encrypted_file> decrypt
 ```
 
 ### Encrypt a file:
 
 ```bash
-$ java -jar secrete.jar -k <recipient_key_file> -i <file_to_encrypt> -o <encrypted_file> encrypt
+$ java -jar ecc.jar -k <recipient_key_file> -i <file_to_encrypt> -o <encrypted_file> encrypt
 ```
 
 ### Decrypt a file:
 
 ```bash
-$ java -jar secrete.jar -i <encrypted_file> -o <decrypted_file> decrypt
+$ java -jar ecc.jar -i <encrypted_file> -o <decrypted_file> decrypt
 ```
 
 Insert the password to unlock the private key.

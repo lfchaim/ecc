@@ -55,7 +55,7 @@ public class Main {
 	 * Constants
 	 */
 	private static final String DESCRIPTION = "ECIES implementation with Curve25519.";
-	private static final String JAR_FILE = "secrete.jar";
+	private static final String JAR_FILE = "ecc.jar";
 
 	// actions
 	private final Map<String, Action> actions = new HashMap<>();
